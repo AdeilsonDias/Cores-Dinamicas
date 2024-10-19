@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Background Dinamico</title>
+</head>
+<body>
+    <main class="content_cores">
+        <div class="caixa_cores">
+            <h1>Troca de Cores Dinamicas</h1>
+            <button onclick="trocarCor('Gray')">Cinza</button>
+            <button onclick="trocarCor('green')">Verde</button>
+            <button onclick="trocarCor('black')">Preto</button>
+            <button onclick="trocarCor('blue')">Azul</button>
+            <button onclick="corAleatoria()">Cor Aleatória</button>
+            <input type="text" placeholder="Nome da cor ou #HEX" id="corDesejada">
+            <button onclick="aplicarCor()" >Aplicar Cor</button>
+            <input type="color" onchange="trocarCor(this.value)">
+            <label for="color" >Escolher imagem
+                <input type="file"  accept="image/*" id="color" onchange="setImagemBody(this.files[0])">
+            </label>
+        </div>
+        
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
